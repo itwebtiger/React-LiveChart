@@ -1,0 +1,22 @@
+.navBar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.appHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 100px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaeaeb;
+}
+
+@media screen and (max-width: 768px) {
+  .App-header {
+    padding: 0 10px;
+  }
+}
