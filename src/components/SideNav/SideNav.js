@@ -11,25 +11,25 @@ const SideNav = props => {
     <div className="sideNav">
       <button
         className="toggleButton"
-        onClick={() => props.setData(legacyData)}
+        onClick={() => props.setChartData(legacyData)}
       >
         Last Month
       </button>
       <button
         className="toggleButton"
-        onClick={() => props.setData(currentData)}
+        onClick={() => props.setChartData(currentData)}
       >
         This Month
       </button>
       <button
         className="toggleButton"
-        onClick={() => props.updateChartDataWithDelta(delta)}
+        onClick={() => props.updateChartData(delta)}
       >
         Delta
       </button>
       <button
         className="toggleButton"
-        onClick={() => props.updateChartDataWithDelta(fullPayload)}
+        onClick={() => props.updateChartData(fullPayload)}
       >
         Full Payload
       </button>
@@ -38,8 +38,8 @@ const SideNav = props => {
 };
 
 SideNav.propTypes = {
-  setData: PropTypes.func,
-  updateChartDataWithDelta: PropTypes.func
+  setChartData: PropTypes.func,
+  updateChartData: PropTypes.func
 };
 
 export default SideNav;

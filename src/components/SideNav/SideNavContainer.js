@@ -8,10 +8,10 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    setData: data => {
+    setChartData: data => {
       dispatch(setChartData(data));
     },
-    updateChartDataWithDelta: payload => {
+    updateChartData: payload => {
       dispatch(updateChartData(payload));
     }
   };
