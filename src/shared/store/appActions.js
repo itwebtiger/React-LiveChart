@@ -7,4 +7,27 @@ const setData = data => {
   };
 };
 
-export { setData };
+const deltaUpdatePending = () => {
+  return {
+    type: appActionTypes.DELTA_PROMISE.pending
+  };
+};
+
+const deltaUpdateFulfilled = () => {
+  return {
+    type: appActionTypes.DELTA_PROMISE.fulfilled
+  };
+};
+
+const deltaUpdateRejected = () => {
+  return {
+    type: appActionTypes.DELTA_PROMISE.rejected
+  };
+};
+
+export {
+  setData,
+  deltaUpdatePending,
+  deltaUpdateFulfilled,
+  deltaUpdateRejected
+};

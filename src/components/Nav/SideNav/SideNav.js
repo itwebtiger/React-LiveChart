@@ -16,14 +16,21 @@ const SideNav = props => {
       >
         This Month
       </button>
-      <button className="toggleButton">Live Delta</button>
+      <button
+        className="toggleButton"
+        onClick={() => props.updateChartDataWithDelta(data)}
+      >
+        Live Delta
+      </button>
       <button className="toggleButton">Live Reload</button>
     </div>
   );
 };
 
 SideNav.propTypes = {
-  setData: PropTypes.func
+  data: PropTypes.array,
+  setData: PropTypes.func,
+  updateChartDataWithDelta: PropTypes.func
 };
 
 export default SideNav;
