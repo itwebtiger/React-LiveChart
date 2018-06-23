@@ -1,12 +1,8 @@
 import seamlessImmutable from 'seamless-immutable';
-import data from '../../mock/legacyDataDump';
-import setPromiseState from '../utilities/promiseState';
+import data from '../../mock/lastMonthDump';
 
 const appInitialState = seamlessImmutable({
-  chartData: data,
-  promise: {
-    updateChart: setPromiseState()
-  }
+  chartData: data
 });
 
 export default appInitialState;

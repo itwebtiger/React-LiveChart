@@ -2,7 +2,7 @@ import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 
 import appActionTypes from './appActionTypes';
-import { setData } from './appActions';
+import { setChartData } from './appActions';
 import appInitialState from './appInitialState';
 
 let state, store;
@@ -19,7 +19,7 @@ describe('appActions', () => {
     store = mockStore(state);
   });
 
-  it(`Should set chart data on ${appActionTypes.SET_DATA} action`, () => {
+  it(`Should set chart data on ${appActionTypes.SET_CHART_DATA} action`, () => {
     const data = [
       {
         key: {
@@ -34,12 +34,12 @@ describe('appActions', () => {
     ];
     const expectedActions = [
       {
-        type: appActionTypes.SET_DATA,
+        type: appActionTypes.SET_CHART_DATA,
         data
       }
     ];
 
-    store.dispatch(setData(data));
+    store.dispatch(setChartData(data));
 
     expect(store.getActions()).toEqual(expectedActions);
   });

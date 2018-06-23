@@ -7,7 +7,7 @@ describe('appReducer', () => {
     expect(appReducer(undefined, {})).toEqual(appInitialState);
   });
 
-  it(`should handle ${appActionTypes.SET_DATA}`, () => {
+  it(`should handle ${appActionTypes.SET_CHART_DATA}`, () => {
     const data = [
       {
         key: {
@@ -25,7 +25,7 @@ describe('appReducer', () => {
       chartData: data
     };
     const action = {
-      type: appActionTypes.SET_DATA,
+      type: appActionTypes.SET_CHART_DATA,
       data
     };
     const reducerOutput = appReducer(appInitialState, action);

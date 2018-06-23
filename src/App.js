@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import ChartContainer from './components/chart/ChartContainer';
-import NavBar from './components/Nav/NavBar/NavBar';
-import SideNavContainer from './components/Nav/SideNav/SideNavContainer';
+import NavBar from './components/NavBar/NavBar';
+import SideNavContainer from './components/SideNav/SideNavContainer';
 import configureStore from './appStore';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';

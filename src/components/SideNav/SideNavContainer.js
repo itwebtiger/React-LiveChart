@@ -1,21 +1,18 @@
 import { connect } from 'react-redux';
 import SideNav from './SideNav';
-import { setData } from '../../../shared/store/appActions';
-import { updateChartDataWithDelta } from './sideNavActions';
+import { setChartData, updateChartData } from '../../shared/store/appActions';
 
 const mapStateToProps = state => {
-  return {
-    data: state.chartApp.chartData
-  };
+  return {};
 };
 
 const mapDispatchToProps = dispatch => {
   return {
     setData: data => {
-      dispatch(setData(data));
+      dispatch(setChartData(data));
     },
-    updateChartDataWithDelta: currentData => {
-      dispatch(updateChartDataWithDelta(currentData));
+    updateChartDataWithDelta: payload => {
+      dispatch(updateChartData(payload));
     }
   };
 };

@@ -1,13 +1,18 @@
 import React from 'react';
 import './sideNav.css';
 import PropTypes from 'prop-types';
-import data from '../../../mock/legacyDataDump';
-import currentData from '../../../mock/currentMonthDump';
+import legacyData from '../../mock/lastMonthDump';
+import currentData from '../../mock/currentMonthDump';
+import delta from '../../mock/deltaDump';
+import fullPayload from '../../mock/fullPayloadDump';
 
 const SideNav = props => {
   return (
     <div className="sideNav">
-      <button className="toggleButton" onClick={() => props.setData(data)}>
+      <button
+        className="toggleButton"
+        onClick={() => props.setData(legacyData)}
+      >
         Last Month
       </button>
       <button
@@ -18,17 +23,21 @@ const SideNav = props => {
       </button>
       <button
         className="toggleButton"
-        onClick={() => props.updateChartDataWithDelta(data)}
+        onClick={() => props.updateChartDataWithDelta(delta)}
       >
-        Live Delta
+        Delta
       </button>
-      <button className="toggleButton">Live Reload</button>
+      <button
+        className="toggleButton"
+        onClick={() => props.updateChartDataWithDelta(fullPayload)}
+      >
+        Full Payload
+      </button>
     </div>
   );
 };
 
 SideNav.propTypes = {
-  data: PropTypes.array,
   setData: PropTypes.func,
   updateChartDataWithDelta: PropTypes.func
 };
