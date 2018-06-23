@@ -5,7 +5,7 @@ const NavBar = () => {
   return (
     <div className="navBar">
       <header className="appHeader">
-        <h4>Chart</h4>
+        <p>Chart</p>
       </header>
     </div>
   );

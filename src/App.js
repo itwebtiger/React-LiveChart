@@ -1,16 +1,26 @@
 import React, { Component } from 'react';
 import './App.css';
 import ChartContainer from './components/chart/ChartContainer';
-import data from '../src/mock/legacyDataDump';
-import NavBar from './components/Nav/NavBar';
+import NavBar from './components/Nav/NavBar/NavBar';
+import SideNavContainer from './components/Nav/SideNav/SideNavContainer';
+import configureStore from './appStore';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+
+const store = configureStore();
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <NavBar />
-        <ChartContainer data={data} />
-      </div>
+      <BrowserRouter>
+        <Provider store={store}>
+          <div className="App">
+            <NavBar />
+            <SideNavContainer />
+            <ChartContainer />
+          </div>
+        </Provider>
+      </BrowserRouter>
     );
   }
 }

@@ -1,8 +1,8 @@
 import { createSelector } from 'reselect';
 import moment from 'moment';
 
-const getChartData = ownProps => {
-  return ownProps.data;
+const getChartData = state => {
+  return state.chartApp.chartData;
 };
 
 const processChartData = chartData => {
