@@ -1,7 +1,7 @@
 const data = [
   {
     key: {
-      segmentNumber: 115,
+      segmentNumber: 15,
       dayTimestamp: 1529040645,
       timestamp: 1529040645
     },
@@ -11,7 +11,7 @@ const data = [
   },
   {
     key: {
-      segmentNumber: 116,
+      segmentNumber: 16,
       dayTimestamp: 1529127045,
       timestamp: 1529127045
     },
@@ -20,7 +20,7 @@ const data = [
   },
   {
     key: {
-      segmentNumber: 123,
+      segmentNumber: 23,
       dayTimestamp: 1529731845,
       timestamp: 1529731845
     },
@@ -30,7 +30,7 @@ const data = [
   },
   {
     key: {
-      segmentNumber: 126,
+      segmentNumber: 26,
       dayTimestamp: 1529991045,
       timestamp: 1529991045
     },
@@ -39,7 +39,7 @@ const data = [
   },
   {
     key: {
-      segmentNumber: 127,
+      segmentNumber: 27,
       dayTimestamp: 1530077445,
       timestamp: 1530077445
     },
