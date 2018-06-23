@@ -1,6 +1,8 @@
-React chart app representing selections of profiles.
+# React chart app representing selections of profiles.
 
 Simple composite chart that represents data of **Added**, **Removed** and **Selection size** segments from old and live data.
+
+<img width="1440" alt="chart" src="https://user-images.githubusercontent.com/14848432/41813135-bd7378ac-774d-11e8-863a-8aeb46cfe8b4.png">
 
 ## Problem
 - Support	existing chart to render real time data from api responses as deltas or full payloads.
@@ -30,7 +32,28 @@ Simple composite chart that represents data of **Added**, **Removed** and **Sele
   - **Reducer** sets the data to **Store**.
   - **Store** updates the **Component State** with new data.
   - Component **Re-Renders** the chart from data. 
+  
+## Implementation
+  Note : All data are mocked. No backend implemented to fetch data from an API.
+  
+  Note : Mock data are stored and used directly as JSON objects in `src/mock` folder.
+  
+  - There are 4 options to toggle data for charts.
+  - These 4 options mimic the data fetch operation by dispatching actions to update chart data.
+  - option 1: `Last Month` dispatches `setChatData()` action to directly modify the store with old data.
+  - option 2: `This Month` dispatches `setChatData()` action to directly modify the store with new data.
+  - option 3: `Delta` dispatches `updateChartData()` action to use middleware to modify the store with new delta.
+  - option 4: `Full Payload` dispatches `updateChartData()` action to use middleware to modify the store with new payload.
 
+## Stack
+  - react
+  - redux
+  - redux-thunk
+  - reselect
+  - recharts
+  - seamless-immutable
+  - jest
+  - enzyme
 
 ## Available Scripts
 
@@ -52,7 +75,7 @@ Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+App is ready to be deployed!
 
 ####  `npm run deploy`
 
